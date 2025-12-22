@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgcphevk4i20w"]
+
+[ext_resource type="Script" uid="uid://bw686fqoi6ull" path="res://Scripts/MainMenu.gd" id="1_28flt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_28flt"]
+font_size = 50
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28flt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PaisajesMode" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = -80.0
+offset_right = 72.5
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Paisajes"
+
+[node name="MatchMode" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -37.5
+offset_right = 100.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MatchMode"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Parejas"
+label_settings = SubResource("LabelSettings_28flt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MatchMode" to="." method="_on_match_mode_pressed"]

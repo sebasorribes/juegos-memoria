@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3y7juoufx5wl"]
+
+[ext_resource type="Script" uid="uid://cv23xrhy3t07p" path="res://Scripts/Match/match_game.gd" id="1_dplar"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o4iys"]
+font_size = 112
+
+[node name="MatchGame" type="Node2D"]
+script = ExtResource("1_dplar")
+
+[node name="Transform" type="Node2D" parent="."]
+
+[node name="Turns" type="Label" parent="Transform"]
+offset_left = 144.0
+offset_right = 590.0
+offset_bottom = 153.0
+text = "Turno: 0"
+label_settings = SubResource("LabelSettings_o4iys")
