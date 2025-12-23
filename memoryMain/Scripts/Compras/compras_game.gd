@@ -30,6 +30,7 @@ var points := 0;
 var turn := 0;
 var maxTurns := 10;
 var isPlaying : bool;
+var isEnded : bool
 
 func _ready() -> void:
 	listText = get_node("Transform/Control/ColorRect/Instruction/Lista");
@@ -47,6 +48,7 @@ func _ready() -> void:
 	points = 0;
 	turn = 0;
 	isPlaying = true;
+	isEnded = false;
 	
 	CreateItemsList();
 
@@ -122,6 +124,8 @@ func _on_intructions_button_pressed() -> void:
 	ShowCards();
 
 func CardSeleccted(cardSelected : Compras_Card) -> void:
+	if(!isPlaying) : return;
+	isPlaying = false;
 	var texturecardSelected = cardSelected.cardImage.texture;
 	print("cambio");
 	if(itemList.has(texturecardSelected)):
@@ -131,6 +135,8 @@ func CardSeleccted(cardSelected : Compras_Card) -> void:
 	turn += 1;
 	CheckTurn();
 	await get_tree().create_timer(0.5).timeout;
+	if(isEnded): return;
+	isPlaying = true;
 	ShowCards();
 
 func DestroyCardShowed() -> void:
@@ -141,7 +147,7 @@ func DestroyCardShowed() -> void:
 
 func CheckTurn() -> void:
 	if(turn >= maxTurns):
-		isPlaying = false;
+		isEnded = true;
 		EndGame();
 
 func EndGame() -> void:
