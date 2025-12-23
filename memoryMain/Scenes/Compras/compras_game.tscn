@@ -1,0 +1,218 @@
+[gd_scene load_steps=9 format=3 uid="uid://u4ocyixjonoj"]
+
+[ext_resource type="Script" uid="uid://c0100eelmi72b" path="res://Scripts/Compras/compras_game.gd" id="1_qwmjx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qwmjx"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jhc3v"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1na0n"]
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_0coxf"]
+font_size = 29
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ydn8c"]
+font_size = 31
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5sfva"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sn8tf"]
+font_size = 50
+
+[node name="Compras_Game" type="Node2D"]
+script = ExtResource("1_qwmjx")
+
+[node name="Transform" type="Node2D" parent="."]
+
+[node name="Control" type="Control" parent="Transform"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Transform/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Instruction" type="Control" parent="Transform/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Transform/Control/ColorRect/Instruction"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -204.5
+offset_top = 35.0
+offset_right = 204.5
+offset_bottom = 104.0
+grow_horizontal = 2
+text = "Lista de compras"
+label_settings = SubResource("LabelSettings_qwmjx")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Transform/Control/ColorRect/Instruction"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -336.5
+offset_top = 114.0
+offset_right = 336.5
+offset_bottom = 211.0
+grow_horizontal = 2
+text = "Memoriza la siguiente lista y luego presiona 'Continuar'. 
+Después de continuar, selecciona la imagen que coincide con el objeto y su cantidad."
+label_settings = SubResource("LabelSettings_jhc3v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IntructionsButton" type="Button" parent="Transform/Control/ColorRect/Instruction"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -115.0
+offset_right = 100.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Transform/Control/ColorRect/Instruction/IntructionsButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Continuar"
+label_settings = SubResource("LabelSettings_1na0n")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Transform/Control/ColorRect/Instruction"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -213.0
+offset_top = 297.0
+offset_right = 213.0
+offset_bottom = 337.0
+grow_horizontal = 2
+text = "La lista que debes recordar es:"
+label_settings = SubResource("LabelSettings_0coxf")
+
+[node name="Lista" type="RichTextLabel" parent="Transform/Control/ColorRect/Instruction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -302.5
+offset_top = -259.25
+offset_right = 302.5
+offset_bottom = 313.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+
+[node name="InGame" type="Control" parent="Transform/Control/ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 211.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Transform/Control/ColorRect/InGame"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 35.0
+offset_bottom = 173.0
+grow_horizontal = 2
+text = "Toca la imagen que pertenece a la lista. 
+Recuerda que, además del producto, 
+debe coincidir el número."
+label_settings = SubResource("LabelSettings_ydn8c")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndGame" type="Control" parent="Transform/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Transform/Control/ColorRect/EndGame"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Aciertos: 0"
+label_settings = SubResource("LabelSettings_5sfva")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndGame" type="Button" parent="Transform/Control/ColorRect/EndGame"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -115.0
+offset_right = 100.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Transform/Control/ColorRect/EndGame/EndGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Menu"
+label_settings = SubResource("LabelSettings_sn8tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Transform/Control/ColorRect/Instruction/IntructionsButton" to="." method="_on_intructions_button_pressed"]
+[connection signal="pressed" from="Transform/Control/ColorRect/EndGame/EndGame" to="." method="_on_end_game_pressed"]

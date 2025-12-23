@@ -22,7 +22,7 @@ font_size = 50
 font_size = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_cp0ys"]
-font_size = 30
+font_size = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_yhxw7"]
 font_size = 50
@@ -73,6 +73,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PaisajesMode" type="Button" parent="Mainbuttons"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -247,6 +248,31 @@ text = "Basado en los ejercicios de memoria de :
 labpsi.mdp.edu.ar/Home/Index"
 label_settings = SubResource("LabelSettings_cp0ys")
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Special_Thanks2" type="Label" parent="CreditsPanel/CreditsBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.75
+offset_top = -55.0
+offset_right = -2.25
+offset_bottom = 221.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Imagenes de alimentos: 
+Palta: Engin_Akyurt
+Manzana: maxito_id
+Naranja: cocoparisienne
+Peras: PIRO4D
+Frutillas: elizadean
+Kiwi: stevepb
+Banana: Couleur
+Huevos: akirEVarga"
+label_settings = SubResource("LabelSettings_cp0ys")
 vertical_alignment = 1
 
 [node name="ExitCredits" type="Button" parent="CreditsPanel/CreditsBackground"]

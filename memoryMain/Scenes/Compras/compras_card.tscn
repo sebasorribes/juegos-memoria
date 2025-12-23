@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm2w2fuw1ylb6"]
+
+[ext_resource type="Script" uid="uid://cnodc40b0j0k8" path="res://Scripts/Compras/compras_card.gd" id="1_x6pg2"]
+[ext_resource type="Texture2D" uid="uid://d0cvdxjivuhjc" path="res://Sprites/Compras/alimentos/bananas.jpg" id="2_hql6k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c32hi"]
+size = Vector2(262, 176)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hakfj"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="ComprasCard" type="Node2D"]
+script = ExtResource("1_x6pg2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_c32hi")
+
+[node name="Image" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_hql6k")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 82.5
+offset_top = -84.5
+offset_right = 127.5
+offset_bottom = -39.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Number" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -34.5
+offset_right = 20.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_hakfj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
