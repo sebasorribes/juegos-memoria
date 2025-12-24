@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cgcphevk4i20w"]
+[gd_scene load_steps=14 format=3 uid="uid://cgcphevk4i20w"]
 
 [ext_resource type="Script" uid="uid://bw686fqoi6ull" path="res://Scripts/MainMenu.gd" id="1_28flt"]
 
@@ -22,13 +22,16 @@ font_size = 50
 font_size = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_cp0ys"]
-font_size = 20
+font_size = 31
 
 [sub_resource type="LabelSettings" id="LabelSettings_16hvj"]
-font_size = 20
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_t1dhk"]
+font_size = 22
 
 [sub_resource type="LabelSettings" id="LabelSettings_vr1f0"]
-font_size = 20
+font_size = 22
 
 [sub_resource type="LabelSettings" id="LabelSettings_yhxw7"]
 font_size = 50
@@ -224,10 +227,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -112.0
-offset_top = -331.5
-offset_right = 112.0
-offset_bottom = -272.5
+offset_left = -173.0
+offset_top = -381.5
+offset_right = 173.0
+offset_bottom = -290.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Desarrollador: 
@@ -243,10 +246,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -296.5
-offset_top = -247.5
-offset_right = 296.5
-offset_bottom = -160.5
+offset_left = -307.0
+offset_top = -269.5
+offset_right = 307.0
+offset_bottom = -178.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Basado en los ejercicios de memoria de : 
@@ -262,10 +265,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -118.0
-offset_top = -119.5
-offset_right = 118.0
-offset_bottom = -60.5
+offset_left = -177.0
+offset_top = -155.5
+offset_right = 177.0
+offset_bottom = -68.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Imágenes tomadas de:
@@ -281,10 +284,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -297.75
-offset_top = -21.0
-offset_right = -32.25
-offset_bottom = 255.0
+offset_left = -316.0
+offset_top = -65.5
+offset_right = -24.0
+offset_bottom = 273.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Imagenes de alimentos: 
@@ -296,7 +299,7 @@ elizadean
 stevepb
 Couleur
 akirEVarga"
-label_settings = SubResource("LabelSettings_cp0ys")
+label_settings = SubResource("LabelSettings_t1dhk")
 vertical_alignment = 1
 
 [node name="Special_Thanks3" type="Label" parent="CreditsPanel/CreditsBackground"]
@@ -306,10 +309,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -21.0
-offset_right = 319.0
-offset_bottom = 255.0
+offset_left = -54.5
+offset_top = -65.5
+offset_right = 372.5
+offset_bottom = 273.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Imagenes de paisajes:
