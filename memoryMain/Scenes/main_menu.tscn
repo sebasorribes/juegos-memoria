@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cgcphevk4i20w"]
+[gd_scene load_steps=13 format=3 uid="uid://cgcphevk4i20w"]
 
 [ext_resource type="Script" uid="uid://bw686fqoi6ull" path="res://Scripts/MainMenu.gd" id="1_28flt"]
 
@@ -6,10 +6,10 @@
 font_size = 50
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_1ehe0"]
+[sub_resource type="LabelSettings" id="LabelSettings_28flt"]
 font_size = 50
 
-[sub_resource type="LabelSettings" id="LabelSettings_28flt"]
+[sub_resource type="LabelSettings" id="LabelSettings_1ehe0"]
 font_size = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_ce3w2"]
@@ -22,6 +22,12 @@ font_size = 50
 font_size = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_cp0ys"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_16hvj"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_vr1f0"]
 font_size = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_yhxw7"]
@@ -72,8 +78,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PaisajesMode" type="Button" parent="Mainbuttons"]
-visible = false
+[node name="MatchMode" type="Button" parent="Mainbuttons"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -87,19 +92,19 @@ offset_bottom = -165.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Mainbuttons/PaisajesMode"]
+[node name="Label" type="Label" parent="Mainbuttons/MatchMode"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Paisajes"
-label_settings = SubResource("LabelSettings_1ehe0")
+text = "Parejas"
+label_settings = SubResource("LabelSettings_28flt")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MatchMode" type="Button" parent="Mainbuttons"]
+[node name="PaisajesMode" type="Button" parent="Mainbuttons"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -113,15 +118,15 @@ offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Mainbuttons/MatchMode"]
+[node name="Label" type="Label" parent="Mainbuttons/PaisajesMode"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Parejas"
-label_settings = SubResource("LabelSettings_28flt")
+text = "Paisajes"
+label_settings = SubResource("LabelSettings_1ehe0")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -219,10 +224,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -89.5
-offset_top = -287.5
-offset_right = 89.5
-offset_bottom = -264.5
+offset_left = -112.0
+offset_top = -331.5
+offset_right = 112.0
+offset_bottom = -272.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Desarrollador: 
@@ -239,14 +244,33 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -296.5
-offset_top = -175.5
+offset_top = -247.5
 offset_right = 296.5
-offset_bottom = -88.5
+offset_bottom = -160.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Basado en los ejercicios de memoria de : 
 labpsi.mdp.edu.ar/Home/Index"
 label_settings = SubResource("LabelSettings_cp0ys")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pixa" type="Label" parent="CreditsPanel/CreditsBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -119.5
+offset_right = 118.0
+offset_bottom = -60.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Imágenes tomadas de:
+ https://pixabay.com/es/"
+label_settings = SubResource("LabelSettings_16hvj")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -257,22 +281,47 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -267.75
-offset_top = -55.0
-offset_right = -2.25
-offset_bottom = 221.0
+offset_left = -297.75
+offset_top = -21.0
+offset_right = -32.25
+offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Imagenes de alimentos: 
-Palta: Engin_Akyurt
-Manzana: maxito_id
-Naranja: cocoparisienne
-Peras: PIRO4D
-Frutillas: elizadean
-Kiwi: stevepb
-Banana: Couleur
-Huevos: akirEVarga"
+Engin_Akyurt
+maxito_id
+cocoparisienne
+PIRO4D
+elizadean
+stevepb
+Couleur
+akirEVarga"
 label_settings = SubResource("LabelSettings_cp0ys")
+vertical_alignment = 1
+
+[node name="Special_Thanks3" type="Label" parent="CreditsPanel/CreditsBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -21.0
+offset_right = 319.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Imagenes de paisajes:
+shogun - jplenio - Bessi
+NguyễnTú - MOHANN
+Wolfgang_Hasselmann - jimmy2820
+Peggychoucair - nuno_lopes
+Nordseher - chriszwettler
+yoshitaka2 - Larisa-K
+Ben_Kerckx - Matthias_Groeneveld
+LionMountain"
+label_settings = SubResource("LabelSettings_vr1f0")
 vertical_alignment = 1
 
 [node name="ExitCredits" type="Button" parent="CreditsPanel/CreditsBackground"]
@@ -319,8 +368,8 @@ label_settings = SubResource("LabelSettings_trj04")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Mainbuttons/PaisajesMode" to="." method="_on_paisajes_mode_pressed"]
 [connection signal="pressed" from="Mainbuttons/MatchMode" to="." method="_on_match_mode_pressed"]
+[connection signal="pressed" from="Mainbuttons/PaisajesMode" to="." method="_on_paisajes_mode_pressed"]
 [connection signal="pressed" from="Mainbuttons/Compras" to="." method="_on_compras_pressed"]
 [connection signal="pressed" from="Mainbuttons/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="CreditsPanel/CreditsBackground/ExitCredits" to="." method="_on_exit_credits_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsdwhhjbqvpo4"]
+
+[ext_resource type="Script" uid="uid://pdc4jcgmrrtk" path="res://Scripts/Landscape/landscape_card.gd" id="1_ey6lv"]
+[ext_resource type="Texture2D" uid="uid://2bj6s8qylq2w" path="res://Sprites/Paisajes/Alemania_vinedo.jpg" id="2_vk771"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey6lv"]
+size = Vector2(524, 355)
+
+[node name="LandscapeCard" type="Node2D"]
+script = ExtResource("1_ey6lv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_vk771")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ey6lv")
